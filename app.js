@@ -8,7 +8,6 @@ function main(){
         url:'/'},
     ];
     var rootElement = document.querySelector('#root');
-    console.log(rootElement);
     generateLayout();
     activateRouter();
     
@@ -19,7 +18,7 @@ function generateLayout(){
 
     }
 function activateRouter(){
-     routerInstance.buildDom(ENTRY_POINT, layoutInstance.main)
+     routerInstance.buildDom(ENTRY_POINT, layoutInstance.main, links)
     }
 
 function changePage(event){
