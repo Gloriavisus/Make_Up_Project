@@ -1,12 +1,9 @@
-## MakeUp
+## MakeUp Nail Polish
 #Descripción de la página web
 Página web relacionada con la compra de maquillaje más concreto en los pintauñas (nail polish)
 Crear una lista de  productos de pintauñas en la página principal y el título de la página.
 Al darle al producto que usted desee le aparezca la información deseada ( fotografía del producto, el precio, la marca  y el color).
 
-Navbar (header)
--this.style
--this.link
 
 Loading
 -this.parentElement
@@ -59,3 +56,6 @@ main.js
 -generate Footer
 -generate Router
 -activate Router
+
+GIT
+https://gloriavisus.github.io/Makeup_Project/.
