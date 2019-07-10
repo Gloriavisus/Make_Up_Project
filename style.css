@@ -73,8 +73,6 @@ html {
     padding-top: 20px;
   }
   
- 
-  }
   
   
   
@@ -93,4 +91,14 @@ html {
     background-color: #fff;
   }
   
- 
+ .card{
+
+ }
+
+ article{
+
+ }
+
+ ul {
+   display: grid;
+ }

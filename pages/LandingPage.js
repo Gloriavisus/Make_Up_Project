@@ -14,8 +14,9 @@ LandingPage.prototype.generate = async function(){
     this.makeUps.forEach((nailPolish)=>{
         this.listItems += `<div class="card" id=${nailPolish.id}>
                                <div id=${nailPolish.id}>
+                               <img src="${nailPolish.image_link}" alt="${nailPolish.name}">
+                                <h3  id=${nailPolish.id} >Name: ${nailPolish.name}</h3>
                                 <p id=${nailPolish.id}>Brand: ${nailPolish.brand}</p>
-                                <p  id=${nailPolish.id} >Name: ${nailPolish.name}</p>
                                 </div>
                             </div>`
     })
@@ -26,7 +27,7 @@ LandingPage.prototype.generate = async function(){
 
     this.elements = `
         <header>
-            <h1> Make Up Beautiful Nail polish </h1>
+            <h1> Beautiful Nail polish </h1>
             <p>${this.link}</p>
             <ul>
             ${this.listItems}
