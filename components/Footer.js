@@ -8,7 +8,7 @@ Footer.prototype.generate = function(){
     this.element = `<footer>
                         <ul>
                             <li>Aviso legal</li>
-                            <li>Provacidad</li>
+                            <li>Privacidad</li>
                             <li>Contactar</li>
                         </ul>
                     </footer>`;
