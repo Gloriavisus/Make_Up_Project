@@ -1,54 +1,51 @@
 'use strict';
-function LandingPage(parentElement, links){
+function LandingPage(parentElement, ){
     this.parentElement = parentElement;
     this.elements = null;
     this.makeUps = [];
     this.listItems = '';
-    this.links = links;
-    this.link = '';
 }
 
 
 LandingPage.prototype.generate = async function(){
     await this.getMakeUps();
+    this.elements = "";
     this.makeUps.forEach((nailPolish)=>{
         this.listItems += `<div class="card" id=${nailPolish.id}>
                                <div id=${nailPolish.id}>
-                               <img src="${nailPolish.image_link}" alt="${nailPolish.name}">
+                               <img id=${nailPolish.id} src="${nailPolish.image_link}" alt="${nailPolish.name}">
                                 <h3  id=${nailPolish.id} >Name: ${nailPolish.name}</h3>
                                 <p id=${nailPolish.id}>Brand: ${nailPolish.brand}</p>
                                 </div>
                             </div>`
     })
 
-    this.links.forEach((link)=>{
-        this.link += `<a href=${link.url}>${link.name}</a>`
-    })
 
-    this.elements = `
+    this.elements += `
         <header>
             <h1> Beautiful Nail polish </h1>
-            <p>${this.link}</p>
             <ul>
             ${this.listItems}
             </ul>
+        </header>
         `;
       
 
     this.render();
-
+    this.elements = ""
 }
 
 LandingPage.prototype.render = function(){
     this.parentElement.innerHTML = this.elements;
-    this.addEvents();
+    var self = this;
+    this.addEvents(self);
 }
-LandingPage.prototype.addEvents = function(){
+LandingPage.prototype.addEvents = function(self){
     let cards = document.querySelectorAll('.card');
     cards.forEach((card)=>{
         card.addEventListener('click', function(event){
             event.stopPropagation();
-            routerInstance.buildDom("/nailpolish", this.parentElement, ["testing"], event.target.id);
+            routerInstance.buildDom("/nailpolish", self.parentElement, event.target.id);
         })
     })
 }

@@ -2,14 +2,13 @@
 function main(){
     var ENTRY_POINT = '/';
     var layoutInstance = null;
+    var myBeautyFooter = null;
     var navbarInstance = null;
-    var links = [
-        {name: 'Home',
-        url:'/'},
-    ];
     var rootElement = document.querySelector('#root');
+
     generateLayout();
     activateRouter();
+    generateFooter();
     
 
 function generateLayout(){
@@ -18,13 +17,13 @@ function generateLayout(){
 
     }
 function activateRouter(){
-     routerInstance.buildDom(ENTRY_POINT, layoutInstance.main, links)
+     routerInstance.buildDom(ENTRY_POINT, layoutInstance.main)
     }
 
-function changePage(event){
-    var url = event.target.attributes.url.value;
-    routerInstance.builDom( url, layoutInstance.main);
-    }
+function generateFooter(){
+    myBeautyFooter = new Footer(layoutInstance.footer);
+    myBeautyFooter.generate();
+}
 };
 
 window.addEventListener('load',main);
