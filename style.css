@@ -124,6 +124,10 @@ html {
    padding: 0;
  }
 
+ header{
+   width: 100%;
+ }
+ 
  header ul{
    display: grid;
    grid-template-columns: repeat(3,1fr);
@@ -132,4 +136,41 @@ html {
 .logo-oferta{
   width:30%;
   height:30%;
+}
+
+@media (max-width: 600px){
+  header ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    padding: 2%;
+    align-items: center;
+  }
+
+  .card img{
+    width: 80%;
+  }
+
+  .card{
+    border: 0px solid black;
+  }
+}
+
+.loading{
+  text-align: center;
+}
+.loading div{
+  border: 14px solid;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border-color: red transparent transparent;
+  margin: 8% auto 8% auto;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  100% {
+      transform: rotate(360deg);
+     filter: hue-rotate(360deg);
+  }
 }
