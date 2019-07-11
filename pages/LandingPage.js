@@ -23,6 +23,7 @@ LandingPage.prototype.generate = async function(){
 
     this.elements += `
         <header>
+            <img class="logo-oferta" src="./descarga.png" alt="logo">
             <h1> Beautiful Nail polish </h1>
             <ul>
             ${this.listItems}

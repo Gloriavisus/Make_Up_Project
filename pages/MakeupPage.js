@@ -24,7 +24,7 @@ function MakeupPage(parentElement, id) {
       var nailpolishCard = new Card(nailpolish);
       this.elements += nailpolishCard.generate();
     })
-    this.elements += `<button class="home">Home</button>`
+    this.elements += `<button class="return">Return</button>`
     this.elements += '</section>';
   
     this.render();
@@ -38,7 +38,7 @@ function MakeupPage(parentElement, id) {
     this.addEvent(self)
   }
   MakeupPage.prototype.addEvent = function(self){
-    var button = document.querySelector('.home')
+    var button = document.querySelector('.return')
     button.addEventListener('click', function(event){
       event.stopPropagation();
       routerInstance.buildDom('/',self.parentElement)})
