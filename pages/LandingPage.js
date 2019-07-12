@@ -9,7 +9,10 @@ function LandingPage(parentElement, ){
 
 LandingPage.prototype.generate = async function(){
     await this.getMakeUps();
-    this.elements = "";
+    this.elements = `<img class="logo-oferta" src="./descarga.png" alt="logo">
+                    <h1> Beautiful Nail polish </h1>`;
+    this.render();
+    this.elements >= "";
     this.makeUps.forEach((nailPolish)=>{
         this.listItems += `<div class="card" id=${nailPolish.id}>
                                <div id=${nailPolish.id}>
@@ -23,8 +26,6 @@ LandingPage.prototype.generate = async function(){
 
     this.elements += `
         <header>
-            <img class="logo-oferta" src="./descarga.png" alt="logo">
-            <h1> Beautiful Nail polish </h1>
             <ul>
             ${this.listItems}
             </ul>
