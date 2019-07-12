@@ -5,7 +5,7 @@ function Loading(parentElement) {
   }
   
   Loading.prototype.generate = function() {
-    this.elements = '<section class="loading"><p>serching...<div></div></section>';
+    this.elements = '<section class="loading"><p>searching...<div></div></section>';
     this.render();
   }
   
